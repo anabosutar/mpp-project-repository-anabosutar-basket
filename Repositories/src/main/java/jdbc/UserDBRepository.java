@@ -1,28 +1,31 @@
-package repositories;
+package jdbc;
 
-import model.Bilet;
+
+import model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import repositories.UserRepository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Properties;
 
-
-public class BiletDBRepository implements BiletRepository {
+public class UserDBRepository implements UserRepository {
     private final static Logger log = LogManager.getLogger();
     private JdbcUtils dbUtils;
 
-    public BiletDBRepository(Properties prop) {
+    public UserDBRepository(Properties prop) {
         log.info("Initializing CarsDBRepository with properties: {} ", prop);
         dbUtils = new JdbcUtils(prop);
 
     }
 
     @Override
-    public void add(Bilet elem) {
+    public void add(User elem) {
 
         log.traceEntry(" parameters {}", elem);
         if (findById(elem.getId()).getId() != -1) {
@@ -33,11 +36,11 @@ public class BiletDBRepository implements BiletRepository {
             Connection connection = dbUtils.getConnection();
             try {
                 PreparedStatement statement =
-                        connection.prepareStatement("INSERT INTO BILETE(id,nr_loc,nr_rand,pret) values (?,?,?,?)");
+                        connection.prepareStatement("INSERT INTO Useri(id,username,password) values (?,?,?)");
                 statement.setInt(1, elem.getId());
-                statement.setInt(2, elem.getNr_loc());
-                statement.setInt(3, elem.getNr_rand());
-                statement.setInt(4, elem.getPret());
+                statement.setString(2, elem.getUsername());
+                statement.setString(3, elem.getPassword());
+
                 statement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -59,98 +62,96 @@ public class BiletDBRepository implements BiletRepository {
     public void delete(Integer integer) {
         log.traceEntry(" parameters {}", integer);
 
-            Connection connection = dbUtils.getConnection();
-            try {
-                PreparedStatement statement =
-                        connection.prepareStatement("delete from BILETE where id = ?");
-                statement.setInt(1,integer);
-                //in loc de primul semnul intrebarii punem id 1=?
-                statement.executeUpdate();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        Connection connection = dbUtils.getConnection();
+        try {
+            PreparedStatement statement =
+                    connection.prepareStatement("delete from USERI where id = ?");
+            statement.setInt(1,integer);
+            //in loc de primul semnul intrebarii punem id 1=?
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 
     }
 
 
     @Override
-    public void update(Bilet elem) {
+    public void update(User elem) {
         log.traceEntry(" parameters {}", elem);
 
-            Connection connection = dbUtils.getConnection();
-            try {
-                PreparedStatement statement =
-                        connection.prepareStatement("update BILETE set nr_loc = ?, nr_rand = ?, pret = ? where id = ?");
-                statement.setInt(1, elem.getNr_loc());
-                statement.setInt(2, elem.getNr_rand());
-                statement.setInt(3, elem.getPret());
-                statement.setInt(4, elem.getId());
-                statement.executeUpdate();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        Connection connection = dbUtils.getConnection();
+        try {
+            PreparedStatement statement =
+                    connection.prepareStatement("update USERI set id = ?,username = ?,password = ? where id = ?");
+            statement.setString(1, elem.getUsername());
+            statement.setString(2, elem.getPassword());
+            statement.setInt(4, elem.getId());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
-    public Bilet findById(Integer id) {
+    public User findById(Integer id) {
 
         log.traceEntry(" parameters {}", id);
         ResultSet resultSet = null;
         Connection connection = dbUtils.getConnection();
         try {
             PreparedStatement statement =
-                    connection.prepareStatement("Select * from BILETE where id = ?");
+                    connection.prepareStatement("Select * from USERI where id = ?");
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                Bilet bilet = new Bilet();
-                bilet.setId(resultSet.getInt(1));
-                bilet.setNr_loc(resultSet.getInt(2));
-                bilet.setNr_rand(resultSet.getInt(3));
-                bilet.setPret(resultSet.getInt(4));
-                return bilet;
+                User user = new User();
+                user.setId(resultSet.getInt(1));
+                user.setUsername(resultSet.getString(2));
+                user.setPassword(resultSet.getString(3));
+
+                return user;
             } else {
-                Bilet bilet = new Bilet();
-                bilet.setId(-1);
-                return bilet;
+                User user = new User();
+                user.setId(-1);
+                return user;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        Bilet bilet = new Bilet();
-        bilet.setId(-1);
-        return bilet;
+        User user = new User();
+        user.setId(-1);
+        return user;
     }
 
 
 
     @Override
-    public List<Bilet> getAll() {
+    public List<User> getAll() {
         log.traceEntry(" Get all");
         ResultSet resultSet = null;
         Connection connection = dbUtils.getConnection();
-        List<Bilet> bilete = new ArrayList<>();
+        List<User> useri = new ArrayList<>();
         try {
             PreparedStatement statement =
-                    connection.prepareStatement("Select * from BILETE");
+                    connection.prepareStatement("Select * from USERI");
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
-                Bilet bilet = new Bilet();
-                bilet.setId(resultSet.getInt(1));
-                bilet.setNr_loc(resultSet.getInt(2));
-                bilet.setNr_rand(resultSet.getInt(3));
-                bilet.setPret(resultSet.getInt(4));
-                bilete.add(bilet);
+                User user = new User();
+                user.setId(resultSet.getInt(1));
+                user.setUsername(resultSet.getString(2));
+                user.setPassword(resultSet.getString(3));
+                useri.add(user);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return bilete;
+        return useri;
     }
 
 //    public void add(T el) {

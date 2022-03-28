@@ -3,13 +3,16 @@ package model;
 public class Echipa {
     int id;
     String nume;
-    String echipa_adversa;
+    int nr_membrii;
 
-    public Echipa(int id, String nume, String echipa_adversa) {
+    public Echipa(int id, String nume, int nr_membrii) {
         this.id = id;
         this.nume = nume;
-        this.echipa_adversa = echipa_adversa;
+        this.nr_membrii = nr_membrii;
+
     }
+
+    public Echipa(){}
 
     public int getId() {
         return id;
@@ -27,11 +30,20 @@ public class Echipa {
         this.nume = nume;
     }
 
-    public String getEchipa_adversa() {
-        return echipa_adversa;
+    public int getNr_membrii() {
+        return nr_membrii;
     }
 
-    public void setEchipa_adversa(String echipa_adversa) {
-        this.echipa_adversa = echipa_adversa;
+    public void setNr_membrii(int nr_membrii) {
+        this.nr_membrii = nr_membrii;
+    }
+
+    @Override
+    public String toString() {
+        return "Echipa{" +
+                "id=" + id +
+                ", nume='" + nume + '\'' +
+                ", nr_membrii=" + nr_membrii +
+                '}';
     }
 }

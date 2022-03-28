@@ -1,19 +1,22 @@
 package model;
 
-public class Concurs {
+public class Meci {
     private int id;
     private int locuri_disponibile;
     private String echipa1;
     private String echipa2;
-    private EtapaConcurs etapa;
+    private String etapa;
 
-    public Concurs(int id, int locuri_disponibile, String echipa1, String echipa2, EtapaConcurs etapa)
+    public Meci(int id, int locuri_disponibile, String echipa1, String echipa2, String etapa)
     {
         this.id = id;
         this.locuri_disponibile = locuri_disponibile;
         this.echipa1 = echipa1;
         this.echipa2 = echipa2;
+        this.etapa = etapa;
     }
+
+    public Meci(){}
 
     public int getId() {
         return id;
@@ -47,15 +50,22 @@ public class Concurs {
         this.echipa2 = echipa2;
     }
 
-    public EtapaConcurs getEtapa() {
+    public String getEtapa() {
         return etapa;
     }
 
-    public void setEtapa(EtapaConcurs etapa) {
+    public void setEtapa(String etapa) {
         this.etapa = etapa;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Meci{" +
+                "id=" + id +
+                ", locuri_disponibile=" + locuri_disponibile +
+                ", echipa1='" + echipa1 + '\'' +
+                ", echipa2='" + echipa2 + '\'' +
+                ", etapa='" + etapa + '\'' +
+                '}';
+    }
 }

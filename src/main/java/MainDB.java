@@ -1,6 +1,9 @@
+import jdbc.MeciDBRepository;
 import model.Bilet;
-import repositories.BiletDBRepository;
+import jdbc.BiletDBRepository;
+import model.Meci;
 import repositories.BiletRepository;
+import repositories.MeciRepository;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,7 +30,17 @@ public class MainDB {
         for (Bilet bilet:bilete) {
             System.out.println(bilet.toString());
         }
+        MeciRepository meciRepo = new MeciDBRepository(props);
+        meciRepo.add(new Meci(1,5,"U-BT","Buc","Finala"));
+        meciRepo.add(new Meci(2,50,"U-BT","TM","SemiFinala1"));
+        meciRepo.add(new Meci(3,15,"U-BT","SV","SemiFinala2"));
 
+        meciRepo.delete(1);
+        meciRepo.update(new Meci(3,0,"U-BT","Buc","Finala"));
+        List<Meci> meciuri = meciRepo.getAll();
+        for (Meci meci:meciuri) {
+            System.out.println(meci.toString());
+        }
 
 
 
