@@ -13,12 +13,14 @@ import java.util.*;
 
 
 public class BiletDBRepository implements BiletRepository {
-    private final static Logger log = LogManager.getLogger();
+    private final static Logger log = LogManager.getLogger(BiletDBRepository.class);
+
     private JdbcUtils dbUtils;
 
     public BiletDBRepository(Properties prop) {
-        log.info("Initializing CarsDBRepository with properties: {} ", prop);
+        log.info("Initializing BiletDBRepository with properties: {} ", prop);
         dbUtils = new JdbcUtils(prop);
+        log.traceExit();
 
     }
 
@@ -43,6 +45,7 @@ public class BiletDBRepository implements BiletRepository {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            log.traceExit();
         }
 
 
@@ -70,6 +73,7 @@ public class BiletDBRepository implements BiletRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        log.traceExit();
 
 
     }
@@ -92,6 +96,7 @@ public class BiletDBRepository implements BiletRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        log.traceExit();
 
     }
 
@@ -114,6 +119,7 @@ public class BiletDBRepository implements BiletRepository {
                 bilet.setPret(resultSet.getInt(4));
 
                 resultSet.close();
+                log.traceExit();
 
                 return bilet;
             } else {
@@ -151,6 +157,7 @@ public class BiletDBRepository implements BiletRepository {
             }
             if (resultSet != null) {
                 resultSet.close();
+                log.traceExit();
             }
 
         } catch (SQLException e) {

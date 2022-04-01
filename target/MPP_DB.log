@@ -1,0 +1,466 @@
+29 Mar 2022 10:32:27,281 DEBUG MainDB 19 main - Some debug log
+29 Mar 2022 10:32:27,281 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:32:27,281 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+29 Mar 2022 10:32:27,296 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=1, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:32:27,296 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 1
+29 Mar 2022 10:32:27,296 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,296 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:32:27,296 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:32:27,296 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:32:27,296 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 48 add - Exit
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=2, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 2
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:32:27,375 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 2
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=3, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 3
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:32:27,375 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 3
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 64 delete - Enter  parameters 1
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 76 delete - Exit
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 84 update - Enter  parameters Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 99 update - Exit
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,375 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:32:27,375 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+29 Mar 2022 10:32:27,391 INFO  MainDB 35 main - Bilet: Bilet{id=2, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:32:27,391 INFO  MainDB 35 main - Bilet: Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:32:27,391 WARN  MainDB 39 main - Warning accrued at 2022-03-29T10:32:27.391110100
+29 Mar 2022 10:32:27,391 ERROR MainDB 40 main - Error accrued at 2022-03-29T10:32:27.391110100
+29 Mar 2022 10:32:27,391 INFO  jdbc.MeciDBRepository 21 <init> - Initializing ConcursDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:32:27,391 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=1, locuri_disponibile=5, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:32:27,391 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 1
+29 Mar 2022 10:32:27,391 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,391 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:32:27,391 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:32:27,391 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:32:27,391 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:32:27,391 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:32:27,391 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,391 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:32:27,402 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=2, locuri_disponibile=50, echipa1='U-BT', echipa2='TM', etapa='SemiFinala1'}
+29 Mar 2022 10:32:27,402 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 2
+29 Mar 2022 10:32:27,402 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,402 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:32:27,402 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 2
+29 Mar 2022 10:32:27,402 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=3, locuri_disponibile=15, echipa1='U-BT', echipa2='SV', etapa='SemiFinala2'}
+29 Mar 2022 10:32:27,402 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 3
+29 Mar 2022 10:32:27,402 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,402 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:32:27,402 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 3
+29 Mar 2022 10:32:27,402 TRACE jdbc.MeciDBRepository 63 delete - Enter  parameters 1
+29 Mar 2022 10:32:27,402 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,402 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:32:27,407 TRACE jdbc.MeciDBRepository 82 update - Enter  parameters Meci{id=3, locuri_disponibile=0, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:32:27,407 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,407 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:32:27,407 TRACE jdbc.MeciDBRepository 136 getAll - Enter  Get all
+29 Mar 2022 10:32:27,407 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:32:27,407 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2dfaea86)
+29 Mar 2022 10:33:29,249 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:33:29,249 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+29 Mar 2022 10:33:29,249 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=1, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:33:29,249 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 1
+29 Mar 2022 10:33:29,249 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,249 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:33:29,249 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:33:29,249 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:33:29,249 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 48 add - Exit
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=2, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 2
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:33:29,343 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 2
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=3, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 3
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:33:29,343 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 3
+29 Mar 2022 10:33:29,343 TRACE jdbc.BiletDBRepository 64 delete - Enter  parameters 1
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,343 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,359 TRACE jdbc.BiletDBRepository 76 delete - Exit
+29 Mar 2022 10:33:29,359 TRACE jdbc.BiletDBRepository 84 update - Enter  parameters Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,359 TRACE jdbc.BiletDBRepository 99 update - Exit
+29 Mar 2022 10:33:29,359 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7d900ecf)
+29 Mar 2022 10:33:29,359 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+29 Mar 2022 10:33:29,359 INFO  jdbc.MeciDBRepository 21 <init> - Initializing ConcursDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:33:29,359 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=1, locuri_disponibile=5, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:33:29,359 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 1
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:33:29,359 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:33:29,359 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:33:29,359 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,359 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=2, locuri_disponibile=50, echipa1='U-BT', echipa2='TM', etapa='SemiFinala1'}
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 2
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:33:29,374 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 2
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=3, locuri_disponibile=15, echipa1='U-BT', echipa2='SV', etapa='SemiFinala2'}
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 3
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:33:29,374 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 3
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 63 delete - Enter  parameters 1
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 82 update - Enter  parameters Meci{id=3, locuri_disponibile=0, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:33:29,374 TRACE jdbc.MeciDBRepository 136 getAll - Enter  Get all
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:33:29,374 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@194fad1)
+29 Mar 2022 10:34:20,732 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:34:20,735 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+29 Mar 2022 10:34:20,739 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=1, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:34:20,740 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 1
+29 Mar 2022 10:34:20,740 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,740 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:34:20,740 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:34:20,740 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:34:20,740 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:34:20,821 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,823 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,823 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,825 TRACE jdbc.BiletDBRepository 48 add - Exit
+29 Mar 2022 10:34:20,826 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=2, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:34:20,826 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 2
+29 Mar 2022 10:34:20,826 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,826 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,827 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:34:20,827 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 2
+29 Mar 2022 10:34:20,827 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=3, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:34:20,827 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 3
+29 Mar 2022 10:34:20,827 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,827 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,828 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:34:20,828 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 3
+29 Mar 2022 10:34:20,828 TRACE jdbc.BiletDBRepository 64 delete - Enter  parameters 1
+29 Mar 2022 10:34:20,828 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,828 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,831 TRACE jdbc.BiletDBRepository 76 delete - Exit
+29 Mar 2022 10:34:20,831 TRACE jdbc.BiletDBRepository 84 update - Enter  parameters Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:34:20,831 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,831 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,833 TRACE jdbc.BiletDBRepository 99 update - Exit
+29 Mar 2022 10:34:20,834 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+29 Mar 2022 10:34:20,834 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,834 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:34:20,834 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+29 Mar 2022 10:34:20,835 INFO  jdbc.MeciDBRepository 21 <init> - Initializing ConcursDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:34:20,839 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=1, locuri_disponibile=5, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:34:20,839 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 1
+29 Mar 2022 10:34:20,839 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,839 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:34:20,839 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:34:20,839 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:34:20,839 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:34:20,840 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:34:20,841 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,841 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:34:20,844 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=2, locuri_disponibile=50, echipa1='U-BT', echipa2='TM', etapa='SemiFinala1'}
+29 Mar 2022 10:34:20,844 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 2
+29 Mar 2022 10:34:20,844 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,844 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:34:20,845 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 2
+29 Mar 2022 10:34:20,845 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=3, locuri_disponibile=15, echipa1='U-BT', echipa2='SV', etapa='SemiFinala2'}
+29 Mar 2022 10:34:20,845 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 3
+29 Mar 2022 10:34:20,845 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,845 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:34:20,845 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 3
+29 Mar 2022 10:34:20,845 TRACE jdbc.MeciDBRepository 63 delete - Enter  parameters 1
+29 Mar 2022 10:34:20,845 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,846 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:34:20,848 TRACE jdbc.MeciDBRepository 82 update - Enter  parameters Meci{id=3, locuri_disponibile=0, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:34:20,848 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,849 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:34:20,851 TRACE jdbc.MeciDBRepository 136 getAll - Enter  Get all
+29 Mar 2022 10:34:20,851 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:34:20,851 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,631 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:36:08,631 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+29 Mar 2022 10:36:08,631 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=1, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:36:08,631 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 1
+29 Mar 2022 10:36:08,631 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,631 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:36:08,631 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:36:08,631 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:36:08,631 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 48 add - Exit
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=2, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 2
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:36:08,709 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 2
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=3, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 3
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:36:08,709 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 3
+29 Mar 2022 10:36:08,709 TRACE jdbc.BiletDBRepository 64 delete - Enter  parameters 1
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,709 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,725 TRACE jdbc.BiletDBRepository 76 delete - Exit
+29 Mar 2022 10:36:08,725 TRACE jdbc.BiletDBRepository 84 update - Enter  parameters Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,725 TRACE jdbc.BiletDBRepository 99 update - Exit
+29 Mar 2022 10:36:08,725 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:36:08,725 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+29 Mar 2022 10:36:08,725 INFO  jdbc.MeciDBRepository 21 <init> - Initializing ConcursDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:36:08,725 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=1, locuri_disponibile=5, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:36:08,725 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 1
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:36:08,725 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:36:08,725 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:36:08,725 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,725 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=2, locuri_disponibile=50, echipa1='U-BT', echipa2='TM', etapa='SemiFinala1'}
+29 Mar 2022 10:36:08,725 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 2
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,725 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 2
+29 Mar 2022 10:36:08,725 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=3, locuri_disponibile=15, echipa1='U-BT', echipa2='SV', etapa='SemiFinala2'}
+29 Mar 2022 10:36:08,725 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 3
+29 Mar 2022 10:36:08,725 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,741 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 3
+29 Mar 2022 10:36:08,741 TRACE jdbc.MeciDBRepository 63 delete - Enter  parameters 1
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,741 TRACE jdbc.MeciDBRepository 82 update - Enter  parameters Meci{id=3, locuri_disponibile=0, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:36:08,741 TRACE jdbc.MeciDBRepository 136 getAll - Enter  Get all
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:36:08,741 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,699 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:39:06,702 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+29 Mar 2022 10:39:06,706 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=1, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:39:06,706 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 1
+29 Mar 2022 10:39:06,706 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,707 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:39:06,707 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:39:06,707 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:39:06,707 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:39:06,794 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,796 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,796 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,799 TRACE jdbc.BiletDBRepository 48 add - Exit
+29 Mar 2022 10:39:06,799 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=2, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:39:06,799 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 2
+29 Mar 2022 10:39:06,800 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,800 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,800 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:39:06,800 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 2
+29 Mar 2022 10:39:06,800 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=3, pret=2, nr_rand=3, nr_loc=4}
+29 Mar 2022 10:39:06,801 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 3
+29 Mar 2022 10:39:06,801 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,801 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,801 TRACE jdbc.BiletDBRepository 122 findById - Exit
+29 Mar 2022 10:39:06,801 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 3
+29 Mar 2022 10:39:06,801 TRACE jdbc.BiletDBRepository 64 delete - Enter  parameters 1
+29 Mar 2022 10:39:06,801 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,802 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,804 TRACE jdbc.BiletDBRepository 76 delete - Exit
+29 Mar 2022 10:39:06,804 TRACE jdbc.BiletDBRepository 84 update - Enter  parameters Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+29 Mar 2022 10:39:06,804 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,804 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,806 TRACE jdbc.BiletDBRepository 99 update - Exit
+29 Mar 2022 10:39:06,807 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+29 Mar 2022 10:39:06,807 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,807 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@312aa7c)
+29 Mar 2022 10:39:06,807 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+29 Mar 2022 10:39:06,808 INFO  jdbc.MeciDBRepository 21 <init> - Initializing ConcursDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+29 Mar 2022 10:39:06,812 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=1, locuri_disponibile=5, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:39:06,812 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 1
+29 Mar 2022 10:39:06,812 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,812 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+29 Mar 2022 10:39:06,812 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+29 Mar 2022 10:39:06,812 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+29 Mar 2022 10:39:06,812 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+29 Mar 2022 10:39:06,814 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,814 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,814 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,817 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=2, locuri_disponibile=50, echipa1='U-BT', echipa2='TM', etapa='SemiFinala1'}
+29 Mar 2022 10:39:06,817 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 2
+29 Mar 2022 10:39:06,817 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,817 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,817 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 2
+29 Mar 2022 10:39:06,818 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=3, locuri_disponibile=15, echipa1='U-BT', echipa2='SV', etapa='SemiFinala2'}
+29 Mar 2022 10:39:06,818 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 3
+29 Mar 2022 10:39:06,818 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,818 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,818 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 3
+29 Mar 2022 10:39:06,818 TRACE jdbc.MeciDBRepository 63 delete - Enter  parameters 1
+29 Mar 2022 10:39:06,818 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,819 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,821 TRACE jdbc.MeciDBRepository 82 update - Enter  parameters Meci{id=3, locuri_disponibile=0, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+29 Mar 2022 10:39:06,821 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,821 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+29 Mar 2022 10:39:06,823 TRACE jdbc.MeciDBRepository 136 getAll - Enter  Get all
+29 Mar 2022 10:39:06,824 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+29 Mar 2022 10:39:06,824 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@5f8e8a9d)
+01 Apr 2022 20:46:34,766 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 20:46:34,770 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 20:46:34,774 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=1, pret=2, nr_rand=3, nr_loc=4}
+01 Apr 2022 20:46:34,775 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 1
+01 Apr 2022 20:46:34,775 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,775 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+01 Apr 2022 20:46:34,775 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+01 Apr 2022 20:46:34,775 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+01 Apr 2022 20:46:34,776 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+01 Apr 2022 20:46:34,855 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,857 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,858 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,860 TRACE jdbc.BiletDBRepository 48 add - Exit
+01 Apr 2022 20:46:34,860 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=2, pret=2, nr_rand=3, nr_loc=4}
+01 Apr 2022 20:46:34,861 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 2
+01 Apr 2022 20:46:34,861 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,861 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,861 TRACE jdbc.BiletDBRepository 122 findById - Exit
+01 Apr 2022 20:46:34,862 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 2
+01 Apr 2022 20:46:34,862 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=3, pret=2, nr_rand=3, nr_loc=4}
+01 Apr 2022 20:46:34,862 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 3
+01 Apr 2022 20:46:34,862 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,862 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,862 TRACE jdbc.BiletDBRepository 122 findById - Exit
+01 Apr 2022 20:46:34,863 WARN  jdbc.BiletDBRepository 33 add - Element already exists: 3
+01 Apr 2022 20:46:34,863 TRACE jdbc.BiletDBRepository 64 delete - Enter  parameters 1
+01 Apr 2022 20:46:34,863 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,863 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,865 TRACE jdbc.BiletDBRepository 76 delete - Exit
+01 Apr 2022 20:46:34,866 TRACE jdbc.BiletDBRepository 84 update - Enter  parameters Bilet{id=3, pret=20, nr_rand=20, nr_loc=40}
+01 Apr 2022 20:46:34,866 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,866 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,868 TRACE jdbc.BiletDBRepository 99 update - Exit
+01 Apr 2022 20:46:34,869 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+01 Apr 2022 20:46:34,869 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,869 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@3de8f619)
+01 Apr 2022 20:46:34,869 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+01 Apr 2022 20:46:34,870 INFO  jdbc.MeciDBRepository 21 <init> - Initializing ConcursDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 20:46:34,874 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=1, locuri_disponibile=5, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+01 Apr 2022 20:46:34,875 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 1
+01 Apr 2022 20:46:34,875 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,875 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+01 Apr 2022 20:46:34,875 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+01 Apr 2022 20:46:34,875 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+01 Apr 2022 20:46:34,875 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+01 Apr 2022 20:46:34,876 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 20:46:34,877 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,877 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 20:46:34,879 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=2, locuri_disponibile=50, echipa1='U-BT', echipa2='TM', etapa='SemiFinala1'}
+01 Apr 2022 20:46:34,879 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 2
+01 Apr 2022 20:46:34,879 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,880 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 20:46:34,880 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 2
+01 Apr 2022 20:46:34,880 TRACE jdbc.MeciDBRepository 29 add - Enter  parameters Meci{id=3, locuri_disponibile=15, echipa1='U-BT', echipa2='SV', etapa='SemiFinala2'}
+01 Apr 2022 20:46:34,880 TRACE jdbc.MeciDBRepository 103 findById - Enter  parameters 3
+01 Apr 2022 20:46:34,880 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,881 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 20:46:34,881 WARN  jdbc.MeciDBRepository 32 add - Element already exists: 3
+01 Apr 2022 20:46:34,881 TRACE jdbc.MeciDBRepository 63 delete - Enter  parameters 1
+01 Apr 2022 20:46:34,881 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,881 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 20:46:34,884 TRACE jdbc.MeciDBRepository 82 update - Enter  parameters Meci{id=3, locuri_disponibile=0, echipa1='U-BT', echipa2='Buc', etapa='Finala'}
+01 Apr 2022 20:46:34,884 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,884 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 20:46:34,888 TRACE jdbc.MeciDBRepository 136 getAll - Enter  Get all
+01 Apr 2022 20:46:34,888 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 20:46:34,888 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4b8d604b)
+01 Apr 2022 21:19:56,719 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:19:56,723 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:20:56,285 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:20:56,288 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:23:55,751 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:23:55,762 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:24:46,484 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:24:46,495 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:25:57,859 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:25:57,862 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:26:23,855 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:26:23,859 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:27:56,330 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:27:56,334 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:28:17,350 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:28:17,353 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:29:36,760 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:29:36,764 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:32:29,866 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:32:29,869 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:32:45,442 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:32:45,446 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:34:27,849 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:34:27,852 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:35:06,936 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=14, pret=66, nr_rand=76, nr_loc=67}
+01 Apr 2022 21:35:06,936 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 14
+01 Apr 2022 21:35:06,936 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 21:35:06,936 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+01 Apr 2022 21:35:06,936 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+01 Apr 2022 21:35:06,936 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+01 Apr 2022 21:35:06,937 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+01 Apr 2022 21:35:07,015 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@16469c50)
+01 Apr 2022 21:35:07,018 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 21:35:07,018 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@16469c50)
+01 Apr 2022 21:35:07,021 TRACE jdbc.BiletDBRepository 48 add - Exit
+01 Apr 2022 21:40:43,345 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:40:43,349 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:43:28,576 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:43:28,579 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:59:15,376 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 21:59:15,379 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 21:59:15,487 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+01 Apr 2022 21:59:15,487 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 21:59:15,488 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+01 Apr 2022 21:59:15,488 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+01 Apr 2022 21:59:15,488 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+01 Apr 2022 21:59:15,488 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+01 Apr 2022 21:59:15,569 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2ba5ae05)
+01 Apr 2022 21:59:15,572 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+01 Apr 2022 22:00:05,891 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+01 Apr 2022 22:00:05,894 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+01 Apr 2022 22:00:06,001 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+01 Apr 2022 22:00:06,002 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+01 Apr 2022 22:00:06,002 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+01 Apr 2022 22:00:06,002 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+01 Apr 2022 22:00:06,002 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+01 Apr 2022 22:00:06,002 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+01 Apr 2022 22:00:06,083 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@2ba5ae05)
+01 Apr 2022 22:00:06,086 TRACE jdbc.BiletDBRepository 160 getAll - Exit
