@@ -14,6 +14,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import model.Bilet;
+import repositories.RepositoryException;
 
 public class BileteView {
     BorderPane pane;
@@ -31,25 +32,26 @@ public class BileteView {
         pane.setCenter(createTable());
     }
 
-    public BorderPane getView(){
+    public BorderPane getView() {
         return pane;
     }
 
     private TableView<Bilet> table = new TableView<>();
-    protected StackPane createTable(){
-        StackPane pane=new StackPane();
+
+    protected StackPane createTable() {
+        StackPane pane = new StackPane();
         initBileteView();
         pane.getChildren().add(table);
         return pane;
     }
 
-    private void initBileteView(){
+    private void initBileteView() {
         TableColumn<Bilet, Integer> idCol = new TableColumn<>("Id");
         TableColumn<Bilet, Integer> pretCol = new TableColumn<>("Pret");
         TableColumn<Bilet, Integer> locCol = new TableColumn<>("NrLoc");
         TableColumn<Bilet, Integer> randCol = new TableColumn<>("NrRand");
 
-        table.getColumns().addAll(idCol,pretCol,locCol,randCol);
+        table.getColumns().addAll(idCol, pretCol, locCol, randCol);
 
         //stabilirea valorilor asociate unei celule
         idCol.setCellValueFactory(new PropertyValueFactory<Bilet, Integer>("id")); //
@@ -57,10 +59,23 @@ public class BileteView {
         locCol.setCellValueFactory(new PropertyValueFactory<Bilet, Integer>("nr_loc"));
         randCol.setCellValueFactory(new PropertyValueFactory<Bilet, Integer>("nr_rand"));
 
-        table.getItems().setAll(biletcontroller.getAll());
+        table.setItems(biletcontroller.getBiletModel());
 
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+// Listen for selection changes and show the SortingTask details when changed.
+        table.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldvalue, newValue) -> showSortingTaskDetails(newValue));
+    }
 
+    private void showSortingTaskDetails(Bilet value) {
+        if (value == null)
+            clearFields();
+        else {
+            biletIdText.setText("" + value.getId());
+            pretText.setText("" + value.getPret());
+            nrLocText.setText("" + value.getNr_loc());
+            nrRandText.setText("" + value.getNr_rand());
+        }
     }
 
     protected GridPane createBilet() {
@@ -102,25 +117,52 @@ public class BileteView {
         Button cancel = new Button("Cancel");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        addBilet.setOnAction(x -> biletcontroller.add(new Bilet(Integer.valueOf(biletIdText.getText()), Integer.valueOf(pretText.getText()), Integer.valueOf(nrRandText.getText()), Integer.valueOf(nrLocText.getText()))));
-        deleteBilet.setOnAction(x->biletcontroller.delete(Integer.valueOf(biletIdText.getText())));
-        updateBilet.setOnAction(x->biletcontroller.update(new Bilet(Integer.valueOf(biletIdText.getText()), Integer.valueOf(pretText.getText()), Integer.valueOf(nrRandText.getText()), Integer.valueOf(nrLocText.getText()))));
-        cancel.setOnAction(x->cancelButton());
-        hbBtn.getChildren().addAll(addBilet,deleteBilet,updateBilet,cancel);
+        addBilet.setOnAction(x -> addButton());
+        //deleteBilet.setOnAction(x -> handleDelete());
+        //updateBilet.setOnAction(x -> handleUpdateTask());
+        cancel.setOnAction(x -> cancelButton());
+        hbBtn.getChildren().addAll(addBilet, deleteBilet, updateBilet, cancel);
         grid.add(hbBtn, 0, 6, 2, 1);
 
 
         return grid;
     }
-    private void cancelButton(){
+
+    private void cancelButton() {
         //table.getSelectionModel().clearSelection();
         clearFields();
     }
-    private void clearFields(){
+
+    private void clearFields() {
         biletIdText.setText("");
         pretText.setText("");
         nrLocText.setText("");
         nrRandText.setText("");
 
+    }
+
+    private void addButton() {
+        String id = biletIdText.getText();
+        String pret = pretText.getText();
+        String loc = nrLocText.getText();
+        String rand = nrRandText.getText();
+
+        try {
+
+            biletcontroller.add(new Bilet(Integer.valueOf(id), Integer.valueOf(pret), Integer.valueOf(rand), Integer.valueOf(loc)));
+            clearFields();
+
+        } catch (NumberFormatException ex) {
+            showErrorMessage("Id-ul si nr elem trebuie sa fie numere intregi! " + ex.getMessage());
+        } catch (RepositoryException ex) {
+            showErrorMessage("Eroare la adaugare: " + ex.getMessage());
+        }
+    }
+
+    static void showErrorMessage(String text) {
+        Alert message = new Alert(Alert.AlertType.ERROR);
+        message.setTitle("Mesaj eroare");
+        message.setContentText(text);
+        message.showAndWait();
     }
 }

@@ -1,6 +1,5 @@
 package jdbc;
 
-import model.Bilet;
 import model.Echipa;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -1,7 +1,10 @@
 package model;
 
-public class Bilet  {
-    private int id, pret,nr_rand,nr_loc;
+import utils.Event;
+
+public class Bilet implements Event {
+    private int id, pret, nr_rand, nr_loc;
+
 
     public Bilet(int id, int pret, int nr_rand, int nr_loc) {
         this.id = id;
@@ -10,7 +13,10 @@ public class Bilet  {
         this.nr_loc = nr_loc;
 
     }
-    public Bilet(){}
+
+
+    public Bilet() {
+    }
 
     public int getId() {
         return id;
@@ -44,6 +50,10 @@ public class Bilet  {
         this.nr_loc = nr_loc;
     }
 
+    public void execute() {
+        System.out.println("Se executa ... " + id);
+    }
+
     @Override
     public String toString() {
         return "Bilet{" +
@@ -53,4 +63,6 @@ public class Bilet  {
                 ", nr_loc=" + nr_loc +
                 '}';
     }
+
+
 }
