@@ -551,3 +551,57 @@
 01 Apr 2022 23:43:26,593 TRACE jdbc.JdbcUtils 48 getConnection - Enter
 01 Apr 2022 23:43:26,593 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7ae03344)
 01 Apr 2022 23:43:26,602 TRACE jdbc.BiletDBRepository 48 add - Exit
+05 Apr 2022 10:14:43,810 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+05 Apr 2022 10:14:43,813 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+05 Apr 2022 10:14:43,816 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+05 Apr 2022 10:14:43,816 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+05 Apr 2022 10:14:43,816 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+05 Apr 2022 10:14:43,817 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+05 Apr 2022 10:14:43,817 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+05 Apr 2022 10:14:43,817 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+05 Apr 2022 10:14:43,937 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@4674db6d)
+05 Apr 2022 10:14:43,940 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+05 Apr 2022 10:32:02,976 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+05 Apr 2022 10:32:02,979 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+05 Apr 2022 10:32:02,980 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+05 Apr 2022 10:32:02,981 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+05 Apr 2022 10:32:02,981 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+05 Apr 2022 10:32:02,981 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+05 Apr 2022 10:32:02,981 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+05 Apr 2022 10:32:02,981 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+05 Apr 2022 10:32:03,050 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7ae03344)
+05 Apr 2022 10:32:03,052 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+05 Apr 2022 10:32:24,455 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=9, pret=99, nr_rand=6, nr_loc=9}
+05 Apr 2022 10:32:24,455 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 9
+05 Apr 2022 10:32:24,456 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+05 Apr 2022 10:32:24,456 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7ae03344)
+05 Apr 2022 10:32:24,456 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+05 Apr 2022 10:32:24,456 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@7ae03344)
+05 Apr 2022 10:32:24,459 TRACE jdbc.BiletDBRepository 48 add - Exit
+06 Apr 2022 13:56:29,499 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+06 Apr 2022 13:56:29,512 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+06 Apr 2022 13:56:29,515 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+06 Apr 2022 13:56:29,516 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+06 Apr 2022 13:56:29,516 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+06 Apr 2022 13:56:29,516 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+06 Apr 2022 13:56:29,517 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+06 Apr 2022 13:56:29,517 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+06 Apr 2022 13:56:29,671 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@341c404a)
+06 Apr 2022 13:56:29,674 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+06 Apr 2022 14:06:02,803 INFO  jdbc.BiletDBRepository 21 <init> - Initializing BiletDBRepository with properties: {jdbc.url=jdbc:sqlite:BasketDB} 
+06 Apr 2022 14:06:02,808 TRACE jdbc.BiletDBRepository 23 <init> - Exit
+06 Apr 2022 14:06:02,811 TRACE jdbc.BiletDBRepository 141 getAll - Enter  Get all
+06 Apr 2022 14:06:02,812 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+06 Apr 2022 14:06:02,812 TRACE jdbc.JdbcUtils 25 getNewConnection - Enter
+06 Apr 2022 14:06:02,812 INFO  jdbc.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:BasketDB
+06 Apr 2022 14:06:02,813 INFO  jdbc.JdbcUtils 31 getNewConnection - user: null
+06 Apr 2022 14:06:02,813 INFO  jdbc.JdbcUtils 32 getNewConnection - pass: null
+06 Apr 2022 14:06:02,931 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@341c404a)
+06 Apr 2022 14:06:02,936 TRACE jdbc.BiletDBRepository 160 getAll - Exit
+06 Apr 2022 14:06:27,694 TRACE jdbc.BiletDBRepository 30 add - Enter  parameters Bilet{id=55, pret=55, nr_rand=55, nr_loc=55}
+06 Apr 2022 14:06:27,695 TRACE jdbc.BiletDBRepository 106 findById - Enter  parameters 55
+06 Apr 2022 14:06:27,695 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+06 Apr 2022 14:06:27,695 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@341c404a)
+06 Apr 2022 14:06:27,696 TRACE jdbc.JdbcUtils 48 getConnection - Enter
+06 Apr 2022 14:06:27,696 TRACE jdbc.JdbcUtils 57 getConnection - Exit with(org.sqlite.SQLiteConnection@341c404a)
+06 Apr 2022 14:06:27,700 TRACE jdbc.BiletDBRepository 48 add - Exit

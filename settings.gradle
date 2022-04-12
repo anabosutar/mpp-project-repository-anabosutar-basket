@@ -1,4 +1,8 @@
 rootProject.name = 'mpp-project-repository-anabosutar-basket'
 include 'Model'
 include 'Repositories'
+include 'Server'
+include 'Services'
+include 'Client'
+include 'Networking'
 

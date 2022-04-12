@@ -65,7 +65,7 @@ public class UserDBRepository implements UserRepository {
         Connection connection = dbUtils.getConnection();
         try {
             PreparedStatement statement =
-                    connection.prepareStatement("delete from USERI where id = ?");
+                    connection.prepareStatement("delete from Useri where id = ?");
             statement.setInt(1,integer);
             //in loc de primul semnul intrebarii punem id 1=?
             statement.executeUpdate();
@@ -84,7 +84,7 @@ public class UserDBRepository implements UserRepository {
         Connection connection = dbUtils.getConnection();
         try {
             PreparedStatement statement =
-                    connection.prepareStatement("update USERI set id = ?,username = ?,password = ? where id = ?");
+                    connection.prepareStatement("update Useri set id = ?,username = ?,password = ? where id = ?");
             statement.setString(1, elem.getUsername());
             statement.setString(2, elem.getPassword());
             statement.setInt(4, elem.getId());
@@ -103,7 +103,7 @@ public class UserDBRepository implements UserRepository {
         Connection connection = dbUtils.getConnection();
         try {
             PreparedStatement statement =
-                    connection.prepareStatement("Select * from USERI where id = ?");
+                    connection.prepareStatement("Select * from Useri where id = ?");
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -136,7 +136,7 @@ public class UserDBRepository implements UserRepository {
         List<User> useri = new ArrayList<>();
         try {
             PreparedStatement statement =
-                    connection.prepareStatement("Select * from USERI");
+                    connection.prepareStatement("Select * from Useri");
             resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -152,6 +152,38 @@ public class UserDBRepository implements UserRepository {
         }
 
         return useri;
+    }
+
+    @Override
+    public User findBy(String username, String pass) {
+        log.traceEntry(" parameters {}", username);
+
+        ResultSet resultSet = null;
+        Connection connection = dbUtils.getConnection();
+        try {
+            PreparedStatement statement =
+                    connection.prepareStatement("Select * from Useri where username = ? and password = ?");
+            statement.setString(1, username);
+            statement.setString(2, pass);
+            resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                User user = new User();
+                user.setId(resultSet.getInt(1));
+                user.setUsername(resultSet.getString(2));
+                user.setPassword(resultSet.getString(3));
+
+                return user;
+            } else {
+                User user = new User();
+                user.setId(-1);
+                return user;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        User user = new User();
+        user.setId(-1);
+        return user;
     }
 
 //    public void add(T el) {
